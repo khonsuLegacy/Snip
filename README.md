@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Snip — URL Shortener
 
 FastAPI + TiDB (MySQL-compatible) URL shortener with click analytics, a REST API with
@@ -122,3 +123,7 @@ curl -X POST http://localhost:8000/api/shorten \
   table grows, instead of a full table scan
 - **Redirects** — `GET /{short_code}` issues an HTTP 307 redirect and increments the
   click counter atomically within the same request
+=======
+# Snip
+Shorten a long URL.
+>>>>>>> ba4380eb7fbee46881491e9af9aca6bbd2a415ea
