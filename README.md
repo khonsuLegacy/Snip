@@ -3,7 +3,9 @@
 
 FastAPI + TiDB (MySQL-compatible) URL shortener with click analytics, a REST API with
 auto-generated Swagger docs, and a small HTML/CSS/JS frontend.
-
+## DEMO
+<img src="assets/Screenshot 2026-07-26 232605.png" width="800">
+<img src="assets/Screenshot 2026-07-26 232618.png" width="800">
 ## Features
 
 - Shorten any URL, with an optional custom alias
