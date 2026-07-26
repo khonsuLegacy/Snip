@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# Snip — URL Shortener
+
+# **Snip — URL Shortener**
 
 FastAPI + TiDB (MySQL-compatible) URL shortener with click analytics, a REST API with
 auto-generated Swagger docs, and a small HTML/CSS/JS frontend.
