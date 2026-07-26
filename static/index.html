@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snip — URL Shortener</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">Snip</span>
+    </div>
+    <a class="docs-link" href="/docs" target="_blank" rel="noopener">API Docs ↗</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Shorten a long URL.</h1>
+      <p class="subtitle">Paste a link, get a short one, track every click.</p>
+
+      <form id="shorten-form" class="shorten-form" autocomplete="off">
+        <input
+          id="original-url"
+          type="url"
+          placeholder="https://example.com/a/very/long/path?with=params"
+          required
+        />
+        <input
+          id="custom-code"
+          type="text"
+          placeholder="custom alias (optional)"
+          maxlength="10"
+        />
+        <button type="submit" id="submit-btn">Shorten</button>
+      </form>
+
+      <div id="error-box" class="error-box hidden"></div>
+
+      <div id="result-card" class="result-card hidden">
+        <div class="result-row">
+          <span id="short-url-text" class="short-url"></span>
+          <button id="copy-btn" class="copy-btn">Copy</button>
+        </div>
+        <div class="result-original" id="result-original"></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" id="stats-strip">
+      <div class="stat">
+        <span class="stat-value" id="stat-total-urls">–</span>
+        <span class="stat-label">Links created</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-total-clicks">–</span>
+        <span class="stat-label">Total clicks</span>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Recent links</h2>
+        <button id="refresh-btn" class="refresh-btn" title="Refresh">⟳</button>
+      </div>
+      <div class="table-wrap">
+        <table id="urls-table">
+          <thead>
+            <tr>
+              <th>Short link</th>
+              <th>Original URL</th>
+              <th>Clicks</th>
+              <th>Created</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="urls-tbody">
+            <tr><td colspan="5" class="empty-row">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built with FastAPI + TiDB (MySQL) · <a href="/docs" target="_blank" rel="noopener">Swagger UI</a>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
